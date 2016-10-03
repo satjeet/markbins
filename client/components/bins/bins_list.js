@@ -43,8 +43,9 @@ class BinsList extends Component {
 
 export default createContainer(()=> {
 	Meteor.subscribe('bins');
+    Meteor.subscribe('sharedBins');
 
-	return {bins: Bins.find({}).fetch()};
+    return {bins: Bins.find({}).fetch()};
 	//solo conseguimos los bins a los que nos subscribimos. lo que se retorna, para como props en BinsList
 
 },BinsList);
