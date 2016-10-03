@@ -3,13 +3,16 @@ import Header from './header'
 import BinsList from './bins/bins_list';
 
 
-export default() =>{
+export default(props) =>{
+	//export default() =>{
 
-	return (
+
+		return (
 
 		<div>
-		<Header/>
-		<BinsList/>
+		    <Header/>
+            {props.children}
+            {/* <BinsList/>    comentario html en jsx */}
 		</div>
 
 		);
